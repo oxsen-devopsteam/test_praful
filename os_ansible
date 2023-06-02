@@ -1,0 +1,12 @@
+- hosts: dbservers
+  remote_user: hello
+  become: yes
+  tasks:
+    - name: update OS packages
+      yum:
+        name: '*'
+        state: latest
+    - name: install httpd
+      yum:
+        name: httpd
+        state: installed
