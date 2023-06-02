@@ -9,4 +9,8 @@
     - name: install httpd
       yum:
         name: httpd
-        state: installed
+    - name: create html file
+      shell:
+        cmd: echo "hello" > /var/www/http/index.html
+        args:
+          executable: /bin/bash        state: installed
