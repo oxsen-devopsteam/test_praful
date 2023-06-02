@@ -1,0 +1,10 @@
+# Install Maria DB
+    - name: install ""{{var1}}"" DB
+      yum:
+       name: "{{var1}}"
+       state: installed
+    - name: start the service
+      service:
+        name: "{{var1}}"
+        state: started
+      ignore_errors: yes

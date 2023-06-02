@@ -1,0 +1,16 @@
+- hosts: [db]
+  remote_user: ansible
+  become: yes
+  tasks:
+    - name: cleanup httpd
+      yum:
+        name: httpd
+        state: removed
+    - name: cleanup mariadb
+      yum:
+        name: mariadb
+        state: removed
+    - name: cleanup mysql
+      yum:
+        name: mysql
+        state: removed
