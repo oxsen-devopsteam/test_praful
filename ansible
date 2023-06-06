@@ -6,7 +6,6 @@
       yum:
         name: httpd
         state: removed
-hello
     - name: cleanup mariadb
       yum:
         name: mariadb
