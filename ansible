@@ -7,7 +7,7 @@
         name: httpd
         state: removed
     - name: cleanup mariadb
-      yum:
+      versionyum:
         name: mariadb
         state: removed
     - name: cleanup mysql
